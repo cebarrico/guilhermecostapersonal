@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --neon: #a3e635;
+  --neon-dim: #6b9a22;
+  --bg: #0a0a0a;
+  --card-bg: #111111;
+  --card-border: #1e1e1e;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.neon-text {
+  color: var(--neon);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+
+.contact-row:hover {
+  border-color: var(--neon);
+  background: #161616;
+}
+
+.contact-row:active {
+  background: #1a1a1a;
+}
+
+.icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chevron {
+  margin-left: auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
