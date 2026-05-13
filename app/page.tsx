@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CONTACTS = [
   {
@@ -18,23 +19,13 @@ const CONTACTS = [
     icon: <Image src="/phone.png" alt="Phone" width={20} height={20} />,
   },
   {
-    href: "mailto:guilherme.personaltrainer@gmail.com",
-    label: "E-MAIL",
-    sublabel: "guilherme.personaltrainer@gmail.com",
+    href: "/portfolio",
+    label: "PORTFÓLIO",
+    sublabel: "Conheça minha trajetória e resultados",
+    color: "#a3e635",
+    isInternal: true,
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        width="20"
-        height="20"
-        fill="none"
-        stroke="#a3e635"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="M22 7l-10 7L2 7" />
-      </svg>
+      <Image src="/portfolio.png" alt="Emagrecimento" width={25} height={25} />
     ),
   },
   {
@@ -102,29 +93,46 @@ function ChevronRight() {
 export default function Home() {
   return (
     <main style={{ minHeight: "100vh", background: "var(--bg)" }}>
-      <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 0 2rem" }}>
+      <div
+        style={{
+          maxWidth: 480,
+          margin: "0 auto",
+          padding: "0 0 2rem",
+          overflow: "hidden",
+        }}
+      >
         {/* Hero Section */}
         <div
           style={{
             position: "relative",
             background: "#0d0d0d",
-            overflow: "hidden",
           }}
         >
           {/* Green accent line top-left diagonal */}
-          <div
+          <svg
+            viewBox="0 0 120 800"
+            preserveAspectRatio="none"
             style={{
               position: "absolute",
-              top: 0,
-              left: "40%",
-              width: 3,
-              height: "100%",
-              background:
-                "linear-gradient(to bottom, var(--neon), transparent)",
-              transform: "skewX(-8deg)",
-              opacity: 0.7,
+              top: 10,
+              left: "min(23%, 18vw)",
+              width: "120px",
+              height: "85%",
+              zIndex: 1,
+              overflow: "visible",
             }}
-          />
+          >
+            <path
+              d="M 25 -50 Q 109 190 111 256 T 25 900"
+              fill="none"
+              stroke="#B7FF00"
+              strokeWidth="3"
+              strokeLinecap="round"
+              style={{
+                filter: "drop-shadow(0 0 8px #B7FF00)",
+              }}
+            />
+          </svg>
 
           <div
             style={{
@@ -141,14 +149,37 @@ export default function Home() {
                 minHeight: 280,
               }}
             >
+              <div
+                style={{
+                  width: "100%",
+                  position: "relative",
+                  minHeight: 280,
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src="/banner1.png"
+                  alt="Academia"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    opacity: 0.92,
+                    filter: "blur(1px) brightness(0.65)",
+                    zIndex: 0,
+                    clipPath: "polygon(0 0, 62% 0, 100% 24%, 86% 100%, 0 100%)",
+                    transform: "scale(1.02)",
+                  }}
+                />{" "}
+              </div>
               <Image
                 src="/model.png"
                 alt="Guilherme Costa Personal Trainer"
                 fill
                 style={{
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                  zIndex: 1,
+                  objectFit: "contain",
+                  objectPosition: "bottom center",
+                  transform: "scale(1.15)",
+                  zIndex: 2,
                 }}
                 priority
               />
@@ -217,19 +248,12 @@ export default function Home() {
                   marginLeft: "1rem",
                 }}
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  fill="none"
-                  stroke="#a3e635"
-                  strokeWidth="1.5"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <circle cx="8" cy="12" r="2" />
-                  <line x1="13" y1="10" x2="19" y2="10" />
-                  <line x1="13" y1="14" x2="17" y2="14" />
-                </svg>
+                <Image
+                  src="/creficon.png"
+                  alt="Emagrecimento"
+                  width={25}
+                  height={25}
+                />
                 <div>
                   <p
                     style={{
@@ -239,7 +263,7 @@ export default function Home() {
                       letterSpacing: "0.04em",
                     }}
                   >
-                    CREF: 123456-G/SP
+                    CREF: 212940-G/SP
                   </p>
                   <p
                     style={{
@@ -265,6 +289,8 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             gap: "0.65rem",
+            position: "relative",
+            zIndex: 3,
           }}
         >
           {CONTACTS.map((c) => (
