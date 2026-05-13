@@ -16,14 +16,31 @@ export const metadata: Metadata = {
   title: "Guilherme Costa — Personal Trainer",
   description:
     "Treino com propósito. Resultados de verdade. Personal trainer registrado CREF.",
+
   authors: [{ name: "Guilherme Costa" }],
+
   openGraph: {
     title: "Guilherme Costa — Personal Trainer",
     description: "Treino com propósito. Resultados de verdade.",
+    url: "https://guilhermecostapersonal.vercel.app",
+    siteName: "Guilherme Costa Personal",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Guilherme Costa Personal",
+      },
+    ],
+    locale: "pt_BR",
     type: "website",
   },
+
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
+    title: "Guilherme Costa — Personal Trainer",
+    description: "Treino com propósito. Resultados de verdade.",
+    images: ["/og-image.jpg"],
   },
 };
 
