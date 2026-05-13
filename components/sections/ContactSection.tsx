@@ -89,19 +89,6 @@ export default function ContactSection() {
           </svg>
           Falar no WhatsApp
         </a>
-        <div style={{ marginTop: "1.25rem" }}>
-          <Link
-            href="/"
-            style={{
-              fontSize: "0.58rem",
-              color: "#4b5563",
-              textDecoration: "none",
-              letterSpacing: "0.06em",
-            }}
-          >
-            ← Voltar ao cartão de visitas
-          </Link>
-        </div>
       </div>
     </section>
   );

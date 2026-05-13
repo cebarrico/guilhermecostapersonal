@@ -12,12 +12,7 @@ const CONTACTS = [
       </svg>
     ),
   },
-  {
-    href: "tel:+5516993922517",
-    label: "LIGAÇÃO",
-    sublabel: "Agende seu horário",
-    icon: <Image src="/phone.png" alt="Phone" width={20} height={20} />,
-  },
+
   {
     href: "/",
     label: "PORTFÓLIO",

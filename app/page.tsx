@@ -31,7 +31,7 @@ export default function Portfolio() {
         {/* ══ SERVIÇOS ════════════════════════════════════════════════════ */}
         <ServicesSection />
         {/* ══ TRANSFORMAÇÕES ════════════════════════════════════════════ */}
-        <ResultSection />
+        {/*<ResultSection />*/}
         {/* ══ DEPOIMENTOS ════════════════════════════════════════════════ */}
         <TestimonialSection />
 
